@@ -12,7 +12,8 @@ function showTab(tab) {
 showTab('namorada');
 
 // CHAVE IA
-const chaveOpenRouter = "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";
+const chaveOpenRouter = "const chaveOpenRouter = "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";
+";
 
 // ----- NAMORADA IA -----
 let mensagensIA = [
