@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #18161d;
+}
+.sidebar {
+  width: 200px;
+  background: #222;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 30px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  padding: 18px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  font-size: 1.1em;
+  letter-spacing: .03em;
+  transition: background .13s;
+}
+.sidebar li.active,
+.sidebar li:hover {
+  background: #bf234a;
+  color: #fff;
+}
+.main-content {
+  flex: 1;
+  padding: 44px 24px 44px 24px;
+  min-height: 100vh;
+}
+.tab-section {
+  display: block;
+  max-width: 650px;
+  margin: auto;
+}
+h2 {
+  margin-top: 0;
+  font-weight: bold;
+  letter-spacing: .03em;
+  color: #ffcad4;
+  text-shadow: 0 2px 8px #0003;
+}
+form label {
+  display: block;
+  margin: 10px 0 6px;
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #23222c;
+  color: #fff;
+  font-size: 1.05em;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+form button {
+  padding: 11px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #bf234a;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 12px;
+  cursor: pointer;
+  margin-right: 12px;
+  font-size: 1.06em;
+}
+form button:hover {
+  background: #a3203d;
+}
+#storyResult {
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 1.08em;
+}
+#chapterBtn button {
+  margin-top: 18px;
+  padding: 10px 17px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.04em;
+  cursor: pointer;
+}
+#chapterBtn button:hover {
+  background: #bf234a;
+}
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  font-size: 1.05em;
+  background: #23222c;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+#favoritesList li {
+  background: #232323;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 13px 16px;
+  box-shadow: 0 1px 3px #0001;
+  position: relative;
+}
+#favoritesList button {
+  margin: 4px 4px 0 0;
+  background: #bf234a;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.99em;
+  cursor: pointer;
+}
+#favoritesList button:hover {
+  background: #a3203d;
+}
+/* -- HISTÓRIAS AGRUPADAS -- */
+.story-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffcad4;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px #0007;
+  margin-top: 32px;
+  position: relative;
+}
+.story-chapters {
+  margin-left: 14px;
+  border-left: 3px solid #bf234a;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+.chapter-card {
+  background: #232323;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 11px 15px;
+  box-shadow: 0 1px 3px #0001;
+  position: relative;
+  font-size: 1.06em;
+}
+.chapter-card .chapter-actions {
+  margin-top: 10px;
+}
+.chapter-card .chapter-actions button {
+  margin: 4px 4px 0 0;
+  background: #bf234a;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.99em;
+  cursor: pointer;
+}
+.chapter-card .chapter-actions button:hover {
+  background: #a3203d;
+}
+button.excluir-historia {
+  float: right;
+  margin-top: -3px;
+  background: #a3203d;
+  font-size: 0.93em;
+  padding: 5px 14px;
+  border-radius: 8px;
+}
+button.excluir-historia:hover {
+  background: #941c31;
+}
+#historiaFiltro {
+  margin-bottom: 16px;
+  background: #23222c;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  padding: 7px 13px;
+  font-size: 1.07em;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.profile img.avatar {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px #0004;
+}
+.profile h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.27em;
+  color: #fff;
+}
+.profile p {
+  margin: 0;
+  color: #ffcad4;
+  font-size: 1em;
+}
+.comandos-info {
+  font-size: .97em;
+  opacity: .7;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+/* Animação digitando... igual WhatsApp */
+.typing-indicator {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.typing-indicator span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #bf234a;
+  border-radius: 50%;
+  margin: 0 2px;
+  opacity: 0.5;
+  animation: bounce 1.3s infinite;
+}
+.typing-indicator span:nth-child(2) { animation-delay: .2s; }
+.typing-indicator span:nth-child(3) { animation-delay: .4s; }
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
+  40% { transform: translateY(-8px); opacity: 1; }
+}
+.chat-window {
+  min-height: 200px;
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+  max-height: 50vh;
+  overflow-y: auto;
+  font-size: 1.09em;
+}
+.msg { margin-bottom: 13px; padding: 9px 13px; border-radius: 10px; max-width: 85%; }
+.you { background: #bf234a; align-self: flex-end; color: #fff;}
+.ia { background: #333; color: #fff;}
+.input-area { display: flex; gap: 8px; }
+.input-area input {
+  flex: 1; padding: 11px; border-radius: 8px; border: none; outline: none; font-size: 1.08em;
+}
+.input-area button {
+  padding: 11px 18px; border-radius: 8px; border: none; background: #bf234a; color: #fff; font-weight: bold; cursor: pointer;
+}
+.input-area button:hover { background: #a3203d; }
+::-webkit-scrollbar {
+  width: 8px;
+  background: #18161d;
+}
+::-webkit-scrollbar-thumb {
+  background: #23222c;
+  border-radius: 10px;
+}
+@media (max-width:700px) {
+  .main-content {
+    padding: 12px 4vw 12px 4vw;
+  }
+  .tab-section {
+    max-width: 99vw;
+  }
+  .sidebar {
+    width: 100px;
+    font-size: .93em;
+    padding-top: 5px;
+  }
+  .sidebar li { padding: 14px 6px;}
+  h2 { font-size: 1.11em;}
+  .story-title { font-size: 1.09em;}
+}
