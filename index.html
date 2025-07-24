@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Loverz – Namorada IA e Histórias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li onclick="showTab('namorada')" class="active">💋 Namorada IA</li>
+      <li onclick="showTab('historias')">📚 Nova História</li>
+      <li onclick="showTab('salvas')">🗃️ Histórias Salvas</li>
+      <li onclick="showTab('favoritos')">❤️ Favoritos</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <!-- Namorada IA -->
+    <section id="tab-namorada" class="tab-section">
+      <div class="profile">
+        <img class="avatar" id="avatarCris" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=420&q=80" alt="Cris">
+        <div>
+          <h2 id="crisName">Cris</h2>
+          <p>Namorada Dominadora • Fetiche: Peido</p>
+        </div>
+      </div>
+      <div id="chatWindow" class="chat-window"></div>
+      <div class="input-area">
+        <input type="text" id="msgInput" placeholder="Digite e pressione Enter...">
+        <button onclick="enviarMsg()">Enviar</button>
+      </div>
+      <div class="comandos-info">
+        <b>Comandos secretos:</b> /castigo /elogio /peido /modo-intenso /modo-leve /surpresa
+      </div>
+      <div style="margin:10px 0 0 0;">
+        <button onclick="salvarConversa()">Salvar conversa</button>
+        <button onclick="favoritarConversa()">Favoritar</button>
+        <button onclick="exportarConversa()">Exportar (.txt)</button>
+        <button onclick="copiarConversa()">Copiar</button>
+      </div>
+    </section>
+
+    <!-- Nova História -->
+    <section id="tab-historias" class="tab-section" style="display:none;">
+      <h2>Histórias Quentes</h2>
+      <form onsubmit="gerarHistoriaForm(event)">
+        <label>Tema/Fetiche: <input id="storyFetiche" required placeholder="Ex: Peido, Dominação, Chuva dourada..."></label>
+        <label>Personagens: <input id="storyChars" placeholder="Ex: Cris, Adson"></label>
+        <label>Cenário: <input id="storyScene" placeholder="Ex: Quarto, Escritório, Praia"></label>
+        <label>Enredo personalizado: <textarea id="storyBrief" placeholder="Descreva o briefing do capítulo"></textarea></label>
+        <label>Tamanho:
+          <select id="storyLength">
+            <option value="curto">Curto</option>
+            <option value="médio" selected>Médio</option>
+            <option value="longo">Longo</option>
+          </select>
+        </label>
+        <label>Modo de Escrita:
+          <select id="storyStyle">
+            <option value="detalhado">Detalhado</option>
+            <option value="dialogo">Diálogo</option>
+            <option value="poetico">Poético</option>
+            <option value="conto rápido">Conto rápido</option>
+            <option value="romance">Romance</option>
+            <option value="realista">Realista</option>
+            <option value="fantasia">Fantasia</option>
+          </select>
+        </label>
+        <button type="submit">Gerar História</button>
+        <button type="button" onclick="modoSurpresaHistoria()">Modo Surpresa</button>
+      </form>
+      <div id="storyResult" style="margin-top:30px"></div>
+      <div id="chapterBtn"></div>
+    </section>
+
+    <!-- Histórias Salvas -->
+    <section id="tab-salvas" class="tab-section" style="display:none;">
+      <h2>Histórias Salvas</h2>
+      <input id="historiaFiltro" placeholder="Filtrar pelo título..." oninput="listarHistoriasAgrupadas()" style="margin-bottom:12px;width:300px;max-width:100%">
+      <div id="storiesGrouped"></div>
+    </section>
+
+    <!-- Favoritos -->
+    <section id="tab-favoritos" class="tab-section" style="display:none;">
+      <h2>Favoritos</h2>
+      <ul id="favoritesList"></ul>
+    </section>
+  </div>
+  <audio id="fartPlayer" style="display:none;"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
